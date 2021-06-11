@@ -3,7 +3,7 @@ cat > docker-compose.override.yml <<EOT
 version: '3'
 services:
   weblate:
-    image: ${TEST_CONTAINER:-weblate/weblate:latest}
+    image: ${TEST_CONTAINER:-pinkuburu/webtest:latest}
     environment:
       WEBLATE_TIME_ZONE: Europe/Prague
       WEBLATE_SITE_DOMAIN: test.example.com
@@ -16,7 +16,7 @@ if [ -n "$3" ] ; then
   for service in celery-backup celery-beat celery-celery celery-memory celery-notify celery-translate ; do
     cat >> docker-compose.override.yml <<EOT
   weblate-${service}:
-    image: ${TEST_CONTAINER:-weblate/weblate:latest}
+    image: ${TEST_CONTAINER:-pinkuburu/webtest:latest}
     environment:
       WEBLATE_TIME_ZONE: Europe/Prague
       WEBLATE_SITE_DOMAIN: test.example.com

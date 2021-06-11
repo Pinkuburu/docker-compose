@@ -1,7 +1,7 @@
 version: "3"
 services:
   weblate:
-    image: weblate/weblate
+    image: pinkuburu/webtest
     tmpfs:
       - /app/cache
     volumes:
@@ -16,7 +16,7 @@ services:
     environment:
       WEBLATE_SERVICE: web
   weblate-celery-backup:
-    image: weblate/weblate
+    image: pinkuburu/webtest
     tmpfs:
       - /app/cache
     volumes:
@@ -30,7 +30,7 @@ services:
     environment:
       WEBLATE_SERVICE: celery-backup
   weblate-celery-beat:
-    image: weblate/weblate
+    image: pinkuburu/webtest
     tmpfs:
       - /app/cache
     volumes:
@@ -44,7 +44,7 @@ services:
     environment:
       WEBLATE_SERVICE: celery-beat
   weblate-celery-celery:
-    image: weblate/weblate
+    image: pinkuburu/webtest
     tmpfs:
       - /app/cache
     volumes:
@@ -59,7 +59,7 @@ services:
     environment:
       WEBLATE_SERVICE: celery-celery
   weblate-celery-memory:
-    image: weblate/weblate
+    image: pinkuburu/webtest
     tmpfs:
       - /app/cache
     volumes:
@@ -74,7 +74,7 @@ services:
     environment:
       WEBLATE_SERVICE: celery-memory
   weblate-celery-notify:
-    image: weblate/weblate
+    image: pinkuburu/webtest
     tmpfs:
       - /app/cache
     volumes:
@@ -89,7 +89,7 @@ services:
     environment:
       WEBLATE_SERVICE: celery-notify
   weblate-celery-translate:
-    image: weblate/weblate
+    image: pinkuburu/webtest
     tmpfs:
       - /app/cache
     volumes:
